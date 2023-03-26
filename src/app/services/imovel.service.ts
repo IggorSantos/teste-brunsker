@@ -19,6 +19,11 @@ export class ImovelService {
         return this.http.get<Imovel[]>(this.baseUrl)
     }
 
+    getImovelById(id: number): Observable<Imovel>{
+      const url = `${this.baseUrl}/${id}`
+      return this.http.get<Imovel>(url)
+    }
+
     createImovel(imovel: Imovel): Observable<Imovel>{
       return this.http.post<Imovel>(this.baseUrl, imovel)
     }
@@ -28,7 +33,7 @@ export class ImovelService {
       return this.http.put<Imovel>(url, imovel)
     }
 
-    deleteImovel(id: string): Observable<Imovel>{
+    deleteImovel(id: number): Observable<Imovel>{
       const url = `${this.baseUrl}/${id}`
       return this.http.delete<Imovel>(url)
     }

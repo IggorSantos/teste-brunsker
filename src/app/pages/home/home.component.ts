@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
       this.getImoveis()
       //this.createImovel()
       //this.deleteImovel()
-      this.updateImovel()
+      //this.updateImovel()
   }
   
     getImoveis(){
@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
     }
 
     deleteImovel(){
-      this.imovel.deleteImovel("5").subscribe({
+      this.imovel.deleteImovel(5).subscribe({
         next:(res:any)=>{      
           console.log(res)
         },
