@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ImovelService } from 'src/app/services/imovel.service';
 import { Imovel } from 'src/app/models/imovel.model';
 
@@ -10,7 +11,7 @@ import { Imovel } from 'src/app/models/imovel.model';
 export class HomeComponent implements OnInit {
   imoveis: Imovel[] = [];
 
-  constructor(private imovel: ImovelService) { }
+  constructor(private imovel: ImovelService, private router: Router) { }
 
   ngOnInit(): void {     
       this.getImoveis()
@@ -31,6 +32,10 @@ export class HomeComponent implements OnInit {
       })
     }
 
+    navigate(){
+      this.router.navigate(['/create-imovel'])
+    }
+
     createImovel(){
       let imovel = {
           "id": 5,
@@ -48,7 +53,7 @@ export class HomeComponent implements OnInit {
       })
     }
 
-    updateImovel(){
+   /* updateImovel(){
       let imovel = {
         "id": 3,
         "nome": "Exemplo create update",
@@ -62,7 +67,7 @@ export class HomeComponent implements OnInit {
           console.log(error)
         }
       })
-    }
+    }*/
 
     deleteImovel(){
       this.imovel.deleteImovel(5).subscribe({

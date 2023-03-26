@@ -28,8 +28,8 @@ export class ImovelService {
       return this.http.post<Imovel>(this.baseUrl, imovel)
     }
 
-    updateImovel(imovel: Imovel): Observable<Imovel>{
-      const url = `${this.baseUrl}/${imovel.id}`
+    updateImovel(id: number, imovel: Imovel): Observable<Imovel>{
+      const url = `${this.baseUrl}/${id}`
       return this.http.put<Imovel>(url, imovel)
     }
 
