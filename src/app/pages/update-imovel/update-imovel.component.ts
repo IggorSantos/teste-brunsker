@@ -35,6 +35,9 @@ export class UpdateImovelComponent implements OnInit {
       ])],
       imagem: [, Validators.compose([
         Validators.required
+      ])],
+      cidade: [, Validators.compose([
+        Validators.required
       ])]
     });
   }

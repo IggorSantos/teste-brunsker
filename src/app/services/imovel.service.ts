@@ -9,7 +9,7 @@ import { Imovel } from '../models/imovel.model';
 })
 
 export class ImovelService {
-    baseUrl = "http://localhost:5875/imovel"
+    baseUrl = "http://localhost:3000/imovel"
 
     constructor(private http: HttpClient){
 
