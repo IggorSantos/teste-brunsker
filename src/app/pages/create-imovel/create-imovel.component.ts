@@ -27,6 +27,9 @@ export class CreateImovelComponent implements OnInit {
       ])],
       imagem: [, Validators.compose([
         Validators.required
+      ])],
+      cidade: [, Validators.compose([
+        Validators.required
       ])]
     });
   }

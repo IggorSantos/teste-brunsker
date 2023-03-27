@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { SearchRoutingModule } from './search-routing.module';
+import { SearchComponent } from './search.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedComponentsModule } from 'src/app/components/shared-components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [SearchComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule,  
+    SearchRoutingModule,  
     SharedComponentsModule,
     ReactiveFormsModule,
     FormsModule,      
@@ -19,4 +19,4 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   providers: [  
   ]
 })
-export class HomeModule { }
+export class SearchModule { }
